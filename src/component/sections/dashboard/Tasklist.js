@@ -39,7 +39,7 @@ const Tasklist = ({ list, deleteTask }) => {
           </tr>
         </thead>
         <tbody>
-          {list.filter(items => items.status.toLowerCase().includes(searchValue.toLowerCase())).map((item, index) => {
+          {list && list.filter(items => items.status.toLowerCase().includes(searchValue.toLowerCase())).map((item, index) => {
             return (
               <tr key={index}>
                 <td>{item.taskname}</td>
