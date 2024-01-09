@@ -29,7 +29,7 @@ const DashboardContent = () => {
   };
   useLayoutEffect(()=>{
   let tasklistdetails = localStorage.getItem("tasklist");
-  if(tasklistdetails !== undefined){
+  if(tasklistdetails  !== undefined && tasklistdetails !== null){
     setData(JSON.parse(tasklistdetails))
   }
   },[])
